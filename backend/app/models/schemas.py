@@ -20,10 +20,11 @@ class DocumentAnswer(BaseModel):
 class ThemeSummary(BaseModel):
     theme: str
     description: str
-    supporting_docs: List[str]  # e.g., ["DOC001", "DOC005"]
+    supporting_docs: List[str]  # e.g., ["DOC001", "DOC005", "DOC007"]
 
 # Represents the response to a user query.
 class QueryResponse(BaseModel):
     synthesized_answer: str
     individual_answers: List[DocumentAnswer]
     themes: Optional[List[ThemeSummary]] = None
+
